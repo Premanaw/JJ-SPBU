@@ -10,9 +10,35 @@ using namespace std;
 map<int, string> nama_SPBU;
 
 int SPBU_terefisien(){
+  int n = 5;
+     int stok[] = {1, 2, 3, 4, 5};
+     int konsumsi_ solar[] = {3, 4, 5, 1, 2};
+     int result = -1;
+     int max_stock = -1;
 
-//CODE
+     for (int i = 0; i < n; ++i) {
+          int current_stock = 0;
+          bool can_complete_cycle = true;
+
+          for (int j = 0; j < n; ++j) {
+              current_stock = current_stock - konsumsi_solar [(i + j) % n] + stok[(i + j) % n];
+
+            if (current_stock < 0) {
+                can_complete_cycle = false;
+                break;
+            }
+        }
+       
+
+      if (can_complate_cycle && current_stoock > max_stock) {
+        max_stock = current_stock;
+        result = i;
+      }        
 }
+
+    return result;
+}
+
 
 int main(){
 
