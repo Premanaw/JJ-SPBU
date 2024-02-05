@@ -12,6 +12,10 @@ map<int, string> nama_SPBU;
 int SPBU_terefisien(){
   
 
+
+
+
+  
      for (int i = 0; i < n; ++i) {
           int current_stock = 0;
           bool can_complete_cycle = true;
